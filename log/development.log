@@ -1,0 +1,367 @@
+ 
+
+  [1m[35m (963.4ms)[0m  [1m[35mCREATE DATABASE "m5guia3" ENCODING = 'unicode'[0m
+  [1m[35m (785.1ms)[0m  [1m[35mCREATE DATABASE "basic_form_test" ENCODING = 'unicode'[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7182217358080282245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20221019130226)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.6ms)[0m  [1m[35mCREATE TABLE "posts" ("id" bigserial primary key, "title" character varying, "content" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221019130226"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2024-09-26 22:11:43.086217"], ["updated_at", "2024-09-26 22:11:43.086217"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(7182217358080282245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/posts/news" for 127.0.0.1 at 2024-09-26 19:29:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/news"):
+  
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:29:35 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 148.6ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 13449.0ms | Allocations: 93684)
+Completed 200 OK in 14447ms (Views: 13540.5ms | ActiveRecord: 30.3ms | Allocations: 101424)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:31:01 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 805)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 2991)
+Completed 200 OK in 142ms (Views: 119.8ms | ActiveRecord: 0.0ms | Allocations: 3318)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:31:08 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 738)
+  Rendered layout layouts/application.html.erb (Duration: 96.1ms | Allocations: 2924)
+Completed 200 OK in 128ms (Views: 106.2ms | ActiveRecord: 0.0ms | Allocations: 3202)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:31:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 96.2ms | Allocations: 2169)
+  Rendered layout layouts/application.html.erb (Duration: 3313.8ms | Allocations: 36789)
+Completed 200 OK in 3636ms (Views: 3402.2ms | ActiveRecord: 12.0ms | Allocations: 45190)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:33:48 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | Allocations: 3614)
+Completed 200 OK in 129ms (Views: 102.4ms | ActiveRecord: 0.0ms | Allocations: 4524)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:36:22 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 87.1ms | Allocations: 2947)
+Completed 200 OK in 119ms (Views: 94.5ms | ActiveRecord: 0.0ms | Allocations: 3255)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:37:15 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 765)
+  Rendered layout layouts/application.html.erb (Duration: 105.6ms | Allocations: 2949)
+Completed 200 OK in 193ms (Views: 122.6ms | ActiveRecord: 0.0ms | Allocations: 3219)
+
+
+Started POST "/posts" for 127.0.0.1 at 2024-09-26 19:38:33 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"", "content"=>""}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mPost Create (10.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", ""], ["content", ""], ["created_at", "2024-09-26 22:38:33.914694"], ["updated_at", "2024-09-26 22:38:33.914694"]]
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:13:in `create'
+Redirected to http://127.0.0.1:3000/posts/index
+Completed 302 Found in 352ms (ActiveRecord: 55.2ms | Allocations: 6704)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:38:34 -0300
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 201.5ms | Allocations: 3017)
+Completed 200 OK in 246ms (Views: 226.9ms | ActiveRecord: 0.0ms | Allocations: 3935)
+
+
+Started GET "/" for 127.0.0.1 at 2024-09-26 19:42:07 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 128.4ms | Allocations: 2402)
+Completed 200 OK in 212ms (Views: 139.2ms | ActiveRecord: 0.0ms | Allocations: 2677)
+
+
+Started GET "/" for 127.0.0.1 at 2024-09-26 19:49:01 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 407.2ms | Allocations: 14074)
+Completed 200 OK in 470ms (Views: 418.0ms | Allocations: 15373)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:49:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 102.2ms | Allocations: 2178)
+  Rendered layout layouts/application.html.erb (Duration: 2638.8ms | Allocations: 36723)
+Completed 200 OK in 2856ms (Views: 2667.4ms | ActiveRecord: 15.5ms | Allocations: 45117)
+
+
+Started POST "/posts" for 127.0.0.1 at 2024-09-26 19:49:44 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"primero", "content"=>"contenido del primero"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPost Create (1.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "primero"], ["content", "contenido del primero"], ["created_at", "2024-09-26 22:49:44.177205"], ["updated_at", "2024-09-26 22:49:44.177205"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/posts/index
+Completed 302 Found in 56ms (ActiveRecord: 17.4ms | Allocations: 3783)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:49:44 -0300
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (7.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 1585)
+  Rendered layout layouts/application.html.erb (Duration: 107.7ms | Allocations: 4111)
+Completed 200 OK in 133ms (Views: 100.7ms | ActiveRecord: 12.0ms | Allocations: 4602)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:50:19 -0300
+Processing by PostsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 17.2ms | Allocations: 662)
+  Rendered layout layouts/application.html.erb (Duration: 130.5ms | Allocations: 3254)
+Completed 200 OK in 205ms (Views: 148.0ms | ActiveRecord: 0.0ms | Allocations: 3901)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:50:59 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:4
+  Rendered posts/index.html.erb within layouts/application (Duration: 54.3ms | Allocations: 1123)
+  Rendered layout layouts/application.html.erb (Duration: 131.9ms | Allocations: 3502)
+Completed 200 OK in 166ms (Views: 138.4ms | ActiveRecord: 8.7ms | Allocations: 3771)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:55:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:5
+  Rendered posts/index.html.erb within layouts/application (Duration: 162.1ms | Allocations: 6234)
+  Rendered layout layouts/application.html.erb (Duration: 3758.1ms | Allocations: 41046)
+Completed 200 OK in 3963ms (Views: 3782.9ms | ActiveRecord: 28.5ms | Allocations: 45156)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:56:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (5.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:14
+  Rendered posts/index.html.erb within layouts/application (Duration: 107.6ms | Allocations: 6237)
+  Rendered layout layouts/application.html.erb (Duration: 2871.4ms | Allocations: 41130)
+Completed 200 OK in 3066ms (Views: 2903.0ms | ActiveRecord: 18.6ms | Allocations: 45240)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:57:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 119.0ms | Allocations: 6511)
+  Rendered layout layouts/application.html.erb (Duration: 2554.0ms | Allocations: 41475)
+Completed 200 OK in 2739ms (Views: 2578.4ms | ActiveRecord: 27.5ms | Allocations: 45585)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:57:40 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1675)
+  Rendered layout layouts/application.html.erb (Duration: 82.0ms | Allocations: 3983)
+Completed 200 OK in 107ms (Views: 87.6ms | ActiveRecord: 0.0ms | Allocations: 4458)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2024-09-26 19:58:27 -0300
+Processing by PostsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 27.1ms | Allocations: 1187)
+  Rendered layout layouts/application.html.erb (Duration: 130.2ms | Allocations: 3747)
+Completed 200 OK in 180ms (Views: 157.3ms | ActiveRecord: 0.0ms | Allocations: 4640)
+
+
+Started POST "/posts" for 127.0.0.1 at 2024-09-26 19:58:38 -0300
+Processing by PostsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "post"=>{"title"=>"segundo", "content"=>"post 2"}, "commit"=>"Submit"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mPost Create (1.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "segundo"], ["content", "post 2"], ["created_at", "2024-09-26 22:58:38.357965"], ["updated_at", "2024-09-26 22:58:38.357965"]]
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/posts_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/posts/index
+Completed 302 Found in 94ms (ActiveRecord: 17.2ms | Allocations: 3742)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:58:38 -0300
+Processing by PostsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:17
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 107.4ms | Allocations: 4025)
+Completed 200 OK in 143ms (Views: 116.2ms | ActiveRecord: 1.4ms | Allocations: 4464)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 19:59:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (15.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 200.7ms | Allocations: 10289)
+  Rendered layout layouts/application.html.erb (Duration: 3066.7ms | Allocations: 44883)
+Completed 200 OK in 3237ms (Views: 3070.4ms | ActiveRecord: 41.4ms | Allocations: 48992)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 22:22:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 99.7ms | Allocations: 10271)
+  Rendered layout layouts/application.html.erb (Duration: 27345.3ms | Allocations: 159059)
+Completed 200 OK in 27450ms (Views: 27354.9ms | ActiveRecord: 15.8ms | Allocations: 163167)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 22:28:36 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 109.2ms | Allocations: 6862)
+  Rendered layout layouts/application.html.erb (Duration: 191.9ms | Allocations: 12665)
+Completed 200 OK in 234ms (Views: 201.5ms | ActiveRecord: 23.1ms | Allocations: 13005)
+
+
+Started GET "/posts/index" for 127.0.0.1 at 2024-09-26 22:32:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 102.6ms | Allocations: 10286)
+  Rendered layout layouts/application.html.erb (Duration: 7279.7ms | Allocations: 74071)
+Completed 200 OK in 7413ms (Views: 7296.7ms | ActiveRecord: 20.1ms | Allocations: 78179)
+
+
+Started GET "/" for 127.0.0.1 at 2024-09-26 22:33:01 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 3817)
+  Rendered layout layouts/application.html.erb (Duration: 117.2ms | Allocations: 9620)
+Completed 200 OK in 146ms (Views: 126.0ms | ActiveRecord: 2.9ms | Allocations: 9952)
+
+
+Started GET "/" for 127.0.0.1 at 2024-09-26 22:33:25 -0300
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (15.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 42.0ms | Allocations: 3611)
+  Rendered layout layouts/application.html.erb (Duration: 251.4ms | Allocations: 9388)
+Completed 200 OK in 294ms (Views: 244.2ms | ActiveRecord: 17.4ms | Allocations: 9667)
+
+
+Started GET "/" for 127.0.0.1 at 2024-09-26 22:33:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:2
+  [1m[36mPost Load (3.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:35
+  Rendered posts/index.html.erb within layouts/application (Duration: 126.4ms | Allocations: 10305)
+  Rendered layout layouts/application.html.erb (Duration: 7416.0ms | Allocations: 74603)
+Completed 200 OK in 7558ms (Views: 7419.4ms | ActiveRecord: 32.9ms | Allocations: 78711)
+
+

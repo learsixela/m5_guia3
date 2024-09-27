@@ -1,0 +1,17 @@
+<%= form_with model: @post, method: :post do |form| %>
+    <div class="col-4 my-3">
+        <div>
+            <%= form.label :title, "Post Title" , class: "form-label" %>
+                <%= form.text_field :title, class: "form-control" %>
+        </div>
+        <br>
+        <div>
+            <%= form.label :content, "Post Content" , class: "form-label" %>
+            <%= form.text_field :content, class: "form-control" %>
+        </div>
+        <br>
+        <div>
+            <%= form.submit "Submit" , class: "btn btn-primary" %>
+        </div>
+    </div>
+<% end %>
