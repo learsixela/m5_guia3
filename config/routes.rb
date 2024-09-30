@@ -1,6 +1,7 @@
 # config/routes.rb
 Rails.application.routes.draw do
   get 'render/index'
+  get "up" => "rails/health#show", as: :rails_health_check
 
   #Rutas get
   get 'posts/index'
@@ -10,5 +11,5 @@ Rails.application.routes.draw do
   #Rutas Post
   post "posts" => "posts#create"
   
-  root "posts#index"
+  root "render#index"
 end
